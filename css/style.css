@@ -1,0 +1,463 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  background: #000;
+  color: #fff;
+}
+section {
+  width: 100%;
+  height: 100vh;
+}
+
+section nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 5% 5px;
+  margin-bottom: 20px;
+}
+
+section nav .logo h1 {
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
+}
+
+section nav .logo h1 span {
+  color: #ff6600;
+  margin-left: 8px;
+}
+
+section nav .right ul {
+  list-style: none;
+}
+
+section nav .right ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+section nav .right ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+section nav .right ul li a:hover {
+  color: #ff6600;
+}
+
+.swiper {
+  width: 95%;
+  height: 85%;
+  border-radius: 20px;
+  overflow: hidden;
+  user-select: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide .image .black {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+}
+
+.swiper-slide .image .black h1 {
+  font-size: 30px;
+  text-align: left;
+  position: relative;
+  top: 60%;
+  left: 5%;
+  color: #fff;
+}
+
+.swiper-slide .image .black .star {
+  color: #ff6600;
+  text-align: left;
+  font-size: 16px;
+  margin: 10px 0;
+  position: relative;
+  top: 60%;
+  left: 5%;
+}
+
+.swiper-slide .image .black p {
+  width: 550px;
+  text-align: justify;
+  font-size: 16px;
+  color: #cccccc;
+  margin: 10px 0;
+  position: relative;
+  top: 60%;
+  left: 5%;
+  line-height: 23px;
+  font-family: "Ink Free";
+}
+
+.swiper-slide .image .black .genre {
+  text-align: left;
+  font-size: 16px;
+  margin: 13px 0;
+  position: relative;
+  top: 60%;
+  left: 5%;
+}
+
+.swiper-slide .image .black .genre a.category {
+  background: #282931;
+  text-decoration: none;
+  color: #cccccc;
+  padding: 5px 10px;
+}
+
+.swiper-slide .image .black .genre a.category span {
+  color: #ff6600;
+}
+
+.swiper-slide .image .black .watch {
+  width: 700px;
+  text-align: left;
+  display: flex;
+  font-size: 16px;
+  margin: 10px 0;
+  position: relative;
+  top: 60%;
+  left: 5%;
+}
+
+.swiper-slide .image .black .watch i {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  text-align: center;
+  background-color: #ff6600;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.swiper-slide .image .black .watch p {
+  position: relative;
+  left: 15px;
+  font-family: sans-serif;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper .swiper-pagination-bullet {
+  background: #ff6600;
+  width: 10px;
+  height: 10px;
+}
+
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+  color: #ff6600;
+}
+/*-----====-----*/
+
+.container {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container .latest {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.container .latest h1 {
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 20px;
+  margin: 20px 0;
+}
+
+.container .latest .box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container .latest .box .card {
+  width: 250px;
+  height: 370px;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.container .latest .box .card .details {
+  width: 250px;
+  height: 370px;
+  overflow: hidden;
+  position: absolute;
+  border-radius: 8px;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.container .latest .box .card:hover .details {
+  opacity: 1;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+}
+
+.container .latest .box .card .details .left {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  transform: translateX(-100px);
+  transition: 0.4s;
+  opacity: 0;
+}
+
+.container .latest .box .card:hover .details .left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.container .latest .box .card .details .left p.name {
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.container .latest .box .card .details .left .date_quality {
+  display: flex;
+  align-items: center;
+}
+
+.container .latest .box .card .details .left .date_quality p.quality {
+  width: 30px;
+  font-size: 13px;
+  background: #ff6600;
+  color: #282931;
+  margin-left: 10px;
+  margin-bottom: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.container .latest .box .card .details .left .date_quality p.date {
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 10px;
+  margin-bottom: 8px;
+}
+
+.container .latest .box .card .details .left p.category {
+  margin-left: 10px;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.container .latest .box .card .details .left .info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.container .latest .box .card .details .left .info .rate {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.container .latest .box .card .details .left .info .rate i {
+  font-size: 12px;
+  color: #ff6600;
+  margin-right: 5px;
+}
+
+.container .latest .box .card .details .left .info .rate p {
+  font-size: 12px;
+}
+
+.container .latest .box .card .details .left .info .time {
+  display: flex;
+  align-items: center;
+}
+
+.container .latest .box .card .details .left .info .time i {
+  font-size: 12px;
+  color: #ff6600;
+  margin-left: 5px;
+}
+
+.container .latest .box .card .details .left .info .time p {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.container .latest .box .card .details .right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  transform: translateX(100px);
+  transition: 0.4s;
+  opacity: 0;
+}
+
+.container .latest .box .card:hover .details .right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.container .latest .box .card .details .right i {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  text-align: center;
+  background-color: #ff6600;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #282931;
+  margin: 0 10px 8px 0;
+}
+
+.container .latest .box .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/*----------*/
+.newsletter {
+  width: 100%;
+  height: 80vh;
+  background-image: linear-gradient(
+      180deg,
+      black,
+      rgba(0, 0, 0, 0.786),
+      rgba(0, 0, 0, 0.582),
+      #ff66008b
+    ),
+    url(../image/6.png);
+  background-position: center;
+  background-size: cover;
+  padding: 10px 10%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.newsletter h1 {
+  font-size: 35px;
+  text-align: center;
+  color: #ff6600;
+}
+.newsletter p {
+  margin: 5px;
+  font-size: 14px;
+  color: #cccccc;
+  font-weight: 500;
+}
+
+.newsletter .news_card {
+  width: 550px;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+  border: 3px solid #ff6600;
+  border-radius: 30px;
+  height: 60px;
+}
+
+.newsletter .news_card input {
+  width: 420px;
+  height: 55px;
+  border-radius: 35px;
+  padding: 0 10px;
+  outline: none;
+  border: none;
+  background: none;
+  color: #cccccc;
+  margin-left: 5px;
+}
+
+.newsletter .news_card button {
+  position: absolute;
+  right: 0;
+  width: 120px;
+  height: 60px;
+  border-radius: 30px;
+  border: 0;
+  outline: none;
+  background-color: #ff6600;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/*--------------------footer----------*/
+.footer {
+  padding: 50px 10% 10px;
+  color: #777;
+}
+.footer h2 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.footer .row {
+  display: flex;
+
+  gap: 80px;
+}
+
+.footer .col a {
+  display: block;
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.footer .row {
+  align-items: flex-start;
+  padding: 10px 0;
+}
+
+.footer button {
+  background: #ff6600;
+  color: #fff;
+  border-radius: 3px;
+  border: none;
+  padding: 7px 15px;
+}
+.footer button img {
+  width: 15px;
+}
